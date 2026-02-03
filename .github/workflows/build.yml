@@ -1,0 +1,15 @@
+name: Enjektor-Yapici
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Derle
+        run: g++ enjektor.cpp -o KebapEnjektor.exe -lcomdlg32
+      - name: Yukle
+        uses: actions/upload-artifact@v3
+        with:
+          name: Enjektor-Dosyasi
+          path: KebapEnjektor.exe
