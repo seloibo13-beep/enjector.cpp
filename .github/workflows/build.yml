@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Derle
-        run: g++ enjektor.cpp -o KebapEnjektor.exe -lcomdlg32
+        run: g++ enjector.cpp -o KebapEnjektor.exe -lcomdlg32
       - name: Yukle
         uses: actions/upload-artifact@v4
         with:
